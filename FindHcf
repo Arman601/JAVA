@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class palindrom {
+    public static void hcfOfTwoNumbers(int firstNumber, int secondNumber) {
+        for (int i = firstNumber; i >= 1; i--) {
+            if (firstNumber % i == 0 && secondNumber % i == 0) {
+                System.out.println("HCF of two number = " + i);
+                break;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the first number:");
+        int firstNumber = sc.nextInt();
+        System.out.print("Enter the second number:");
+        int secondNumber = sc.nextInt();
+        hcfOfTwoNumbers(firstNumber, secondNumber);
+        sc.close();
+    }
+
+}
