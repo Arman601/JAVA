@@ -1,0 +1,28 @@
+//write a program to find the index of k  ?
+
+import java.util.Scanner;
+
+public class  FindIndex{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the array");
+        int n = sc.nextInt();
+
+        int arr[] = new int[n];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+
+        }
+        System.out.println("Enter the k");
+        int k = sc.nextInt();
+        int index = 0;
+        for (int i = 0; i < arr.length; i++) {
+            // System.out.println(arr[i]);
+            if (arr[i] == k) {
+                index = i;
+            }
+
+        }
+        System.out.println("index = " + index);
+    }
+}
