@@ -1,0 +1,21 @@
+public class StringMutableImmutable {
+    public static void main(String[] args) {
+
+        //  1. Mutable version using StringBuilder
+        StringBuilder sb = new StringBuilder("Arman");
+        sb.append(" Hasan");
+        System.out.println("Mutable (StringBuilder): " + sb);
+
+        //  2. Convert Mutable → Immutable
+        String immutableStr = sb.toString(); // convert to String
+        System.out.println("Immutable (String): " + immutableStr);
+
+        // immutableStr.concat(" Java"); // doesn’t change original string
+        System.out.println("After concat (no change): " + immutableStr);
+
+        //  3. Convert Immutable → Mutable again
+        StringBuilder againMutable = new StringBuilder(immutableStr);
+        againMutable.append(" Java Developer");
+        System.out.println("Back to Mutable (StringBuilder): " + againMutable);
+    }
+}
